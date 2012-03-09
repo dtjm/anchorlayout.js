@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head><title>QML-style anchor layout</title></head>
+    <body>
+        <textarea>textarea</textarea>
+        <div style="padding: 5px; background: #ccc;width: 100px; height:
+            200px">FRANK Left
+            of me is anchored to right of textarea</div>
+        <div style="margin: 10px; background: #fcc;width: 100px; height:
+            100px">PHIL: Right
+            of me is anchored to left of FRANK</div>
+        <div style="padding:5px; margin: 5px; background: #cfc; opacity:
+            0.8">JIM: my
+            bottom is anchored to FRANK's bottom</div>
+        <div style="padding:5px; border: 20px solid #fcf;
+            background: white; opacity:
+            0.8">ART: my top is anchored to PHIL's top</div>
+        <script src="./anchorlayout.js"></script>
+        <script>
+            var ta = document.getElementsByTagName("textarea")[0];
+            var frank = document.getElementsByTagName("div")[0];
+            var phil = document.getElementsByTagName("div")[1];
+            var jim = document.getElementsByTagName("div")[2];
+            var art = document.getElementsByTagName("div")[3];
+            var layout = new AnchorLayout();
+            layout.anchor(frank, "left", ta, "right");
+            layout.anchor(phil, "right", frank, "left");
+            layout.anchor(jim, "bottom", frank, "bottom");
+            layout.anchor(art, "top", phil, "top");
+            layout.anchor(art, "left", frank, "right");
+
+            window.onresize = ta.onmouseup = ta.onmousemove = function() {
+                layout.reflow();
+            }
+            layout.reflow();
+        </script>
+    </body>
+</html>
