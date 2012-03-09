@@ -39,7 +39,7 @@
                 source.style.left =
                     (offset - source.offsetWidth - 2*parseInt(source.style.marginRight)) + "px";
             } else if (sPos === "bottom") {
-                source.style.top = (offset - source.offsetHeight - parseInt(source.style.marginBottom)) + "px";
+                source.style.top = (offset - source.offsetHeight - 2*parseInt(source.style.marginBottom)) + "px";
             } else if (sPos === "top") {
                 source.style.top = offset + "px";
             }
