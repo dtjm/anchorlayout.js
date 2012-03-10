@@ -15,6 +15,8 @@
         <div style="padding:5px; border: 20px solid #fcf;
             background: white; opacity:
             0.8">ART: my top is anchored to PHIL's top</div>
+        <div style="padding-top: 100px;border: 4px dotted green">border</div>
+        <div style="width: 80px; height: 80px; background: red">[CENTER IN JIM]</div>
         <script src="./anchorlayout.js"></script>
         <script>
             var ta = document.getElementsByTagName("textarea")[0];
@@ -22,12 +24,16 @@
             var phil = document.getElementsByTagName("div")[1];
             var jim = document.getElementsByTagName("div")[2];
             var art = document.getElementsByTagName("div")[3];
+            var pink = document.getElementsByTagName("div")[4];
+            var ctr = document.getElementsByTagName("div")[5];
             var layout = new AnchorLayout();
             layout.anchor(frank, "left", ta, "right");
             layout.anchor(phil, "right", frank, "left");
             layout.anchor(jim, "bottom", frank, "bottom");
             layout.anchor(art, "top", phil, "top");
             layout.anchor(art, "left", frank, "right");
+            layout.fill(pink, frank);
+            layout.centerIn(ctr, jim);
 
             window.onresize = ta.onmouseup = ta.onmousemove = function() {
                 layout.reflow();
