@@ -107,5 +107,6 @@
         }
     };
 
+    // Export to window object
     window.AnchorLayout = AnchorLayout;
 })();
