@@ -2,10 +2,10 @@ anchorlayout.js
 ===============
 Anchor-based layouts inspired by QML
 
-# new AnchorLayout
+## new AnchorLayout
 Constructor
 
-# anchor(src, side, target, side)
+## anchor(src, side, target, side)
 Anchors one side of the source element to a side of the target element.
 Sides can be one of the following:
 
@@ -14,23 +14,23 @@ Sides can be one of the following:
 - `horizontalCenter`
 - `verticalCenter`
 
-# fill(src, target)
+## fill(src, target)
 Makes the source element the same size and position as the target.
 
 # centerIn(source, target)
 Centers the `src` element onto target's center without changing the
 size of the source element;
 
-# reflow()
+## reflow()
 This needs to be called every time you want the layout to be
 recalculated. Put it in your `window.onresize` callback or some place
 like that.
 
-## References
+### References
 - [Anchor-based layout in QML](http://qt-project.org/doc/qt-4.8/qml-anchor-layout.html)
 - [A List Apart - Conflicting Absolute Positions](http://www.alistapart.com/articles/conflictingabsolutepositions)
 
-## License
+### License
 Copyright (c) 2012 Sam Nguyen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
