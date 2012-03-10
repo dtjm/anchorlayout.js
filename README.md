@@ -17,7 +17,7 @@ Sides can be one of the following:
 ## fill(src, target)
 Makes the source element the same size and position as the target.
 
-# centerIn(source, target)
+## centerIn(source, target)
 Centers the `src` element onto target's center without changing the
 size of the source element;
 
